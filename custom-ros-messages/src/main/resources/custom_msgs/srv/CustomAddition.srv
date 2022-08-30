@@ -1,0 +1,13 @@
+# A custom ROS service definition to demonstrate usage through Java.
+# Performs an addition and creates a textual description
+# @author Spyros Koukas
+
+string text
+uint32 number_a
+uint32 number_b
+---
+bool success
+uint32 result
+string description
+
+

@@ -1,0 +1,48 @@
+//@author Spyros Koukas
+
+plugins {
+    id 'application'
+    id 'java'
+    id 'idea'
+}
+
+
+mainClassName = "eu.spyros.koukas.ros.examples.Main"
+
+repositories {//start repositories
+		jcenter()
+        mavenCentral()
+        maven {
+            url "https://github.com/rosjava/rosjava_mvn_repo/raw/master"
+        }
+
+}//end repositories
+
+group 'eu.spyros.koukas.examples.rosjava'
+version = '0.1-SNAPSHOT'
+
+
+task('runWithExternalRos', dependsOn: 'classes', type: JavaExec) {
+    group 'application'
+    mainClass = 'eu.spyros.koukas.ros.examples.MainExternal'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {//start dependencies
+
+    implementation project(':custom-ros-messages')
+
+    implementation 'org.ros.rosjava_core:rosjava:0.3.6'
+
+
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.apache.commons:commons-collections4:4.1'
+    implementation 'org.apache.commons:commons-configuration2:2.3'
+
+
+
+    implementation 'org.ros.rosjava_bootstrap:message_generation:0.3.3'
+    implementation 'org.ros.rosjava_messages:std_msgs:0.5.11'
+    implementation 'org.ros.rosjava_messages:rosjava_test_msgs:0.3.0'
+	
+}//end dependencies

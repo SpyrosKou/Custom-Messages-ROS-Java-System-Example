@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>integration</name>
+    <version>0.1.0</version>
+    <!-- This is a sample package.xml, similar to what you might find in a ROS interfaces Package. This file is completely ignored by ROS Java, but is here to demonstrate that you can use an existing ROS interfaces package, as is, to generate ROS Java artifacts.-->
+    <description>A ROS package with some custom ROS interfaces definition</description>
+
+    <license>Apache 2.0</license>
+
+    <author>Spyros Koukas</author>
+
+    <depend>std_msgs</depend>
+    <depend>actionlib_msgs</depend>
+    <depend>geometry_msgs</depend>
+    <depend>sensor_msgs</depend>
+
+    <build_depend>message_generation</build_depend>
+    <exec_depend>message_runtime</exec_depend>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <export>
+    </export>
+</package>
