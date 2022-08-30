@@ -1,12 +1,13 @@
 # [Custom Messages ROS Java System Example](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git)
 
-This is an example ROS system running completely on Java with no ROS instalation required that demonstrates the usage of **custom ROS topic messages** and **custom ROS Service definitions**.
-It is an example that demonstrates running a roscore and four rosjava ROS nodes that use custom ROS messages using the ROS Java roscore. 
+This is an example ROS system that demonstrates the usage of **custom ROS topic messages** and **custom ROS Service definitions**.
+The example runs completely on Java with no ROS instalation required.
+The example demonstrates running a roscore and four rosjava ROS nodes that use **custom ROS messages** using the ROS Java roscore. 
 ROS Java contains a plain java, standalone version of roscore that does not require any ROS instalation to be present.
 
 In this repository, a Topic Publisher, a ROS Topic Subscriber, a ROS Service Server and a Service Client are created using the custom ROS messages.
-A simpler, version of this repository that uses predefined ROS messages only is available [here](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
-This repository builds on top of the [Plain ROS Java System Example](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
+A version of this repository that uses predefined ROS messages only is available [here](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
+This repository builds on top of the afforementioned [Plain ROS Java System Example](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
 
 This example project demonstrates how to do the following **programmatically** through the ROS Java API:
 1. Create and use a **reusable java jar library** with the generated ROS Java definitions for **custom ROS messages**
@@ -17,6 +18,14 @@ This example project demonstrates how to do the following **programmatically** t
 
 
 This repository also provides an example that demonstrates how to run rosjava with an another roscore. E.g. cpp roscore from **ROS noetic**. 
+
+## Project Modules
+### [The 'custom-ros-messages' module](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/tree/main/custom-ros-messages)
+This module creates java library jar with a [custom Ros Topic Message](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/blob/main/custom-ros-messages/src/main/resources/custom_msgs/msg/RosCustomMessage.msg) and a [custom ROS Service definition](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/blob/main/custom-ros-messages/src/main/resources/custom_msgs/srv/CustomAddition.srv).    
+The custom ROS Topic message also demonstrates how to use predefined ROS messages, by using as an example the [sensor_msgs/JointState](http://docs.ros.org/en/api/sensor_msgs/html/msg/JointState.html).
+
+### [The 'ros-app' module](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/tree/main/ros-app)
+This module uses the [custom-ros-messages module](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/tree/main/custom-ros-messages) to implement a [service](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/blob/main/ros-app/src/main/java/eu.spyros.koukas.ros.examples/CustomROSJavaServerNodeMain.java)/[client](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/blob/main/ros-app/src/main/java/eu.spyros.koukas.ros.examples/CustomROSJavaClientNodeMain.java) and [publisher](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/blob/main/ros-app/src/main/java/eu.spyros.koukas.ros.examples/CustomROSJavaPublisherNodeMain.java)/[subcriber](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example/blob/main/ros-app/src/main/java/eu.spyros.koukas.ros.examples/CustomROSJavaSubscriberNodeMain.java) examples.
 
 ## Requirements
 
