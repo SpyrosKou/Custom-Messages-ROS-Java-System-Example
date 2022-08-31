@@ -7,7 +7,7 @@ ROS Java contains a plain java, standalone version of roscore that does not requ
 
 In this repository, a Topic Publisher, a ROS Topic Subscriber, a ROS Service Server and a Service Client are created using the custom ROS messages.
 A version of this repository that uses predefined ROS messages only is available [here](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
-This repository builds on top of the afforementioned [Plain ROS Java System Example](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
+This repository builds on top of the aforementioned [Plain ROS Java System Example](https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git).
 
 This example project demonstrates how to do the following **programmatically** through the ROS Java API:
 1. Create and use a **reusable java jar library** with the generated ROS Java definitions for **custom ROS messages**
@@ -36,7 +36,7 @@ In order to compile and run this project only Java needs to be installed. [GIT](
 
 ## Quick Instructions for Windows [Power Shell](https://github.com/PowerShell/PowerShell/releases/)
 1. [Clone](https://git-scm.com/docs/git-clone) the [project repository](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git):
-`git clone https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git`
+`git clone https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git`
 
 2. Go into the cloned repository directory:
 `cd .\Custom-Messages-ROS-Java-System-Example\`
@@ -49,7 +49,7 @@ In order to compile and run this project only Java needs to be installed. [GIT](
 
 ## Quick Instructions for Linux
 1. [Clone](https://git-scm.com/docs/git-clone) the [project repository](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git):
-`git clone https://github.com/SpyrosKou/Plain-ROS-Java-System-Example.git`
+`git clone https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git`
 
 2. Go into the cloned repository directory:
 `cd Custom-Messages-ROS-Java-System-Example/`
