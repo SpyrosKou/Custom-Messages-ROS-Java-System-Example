@@ -8,12 +8,12 @@
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/
+.mtj.tmp
 
 # Gradle files
-.gradle/
+.gradle
 # InteliJ files
-.idea/
+.idea
 
 # build folder
 build
@@ -22,7 +22,6 @@ build
 generated-sources
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
