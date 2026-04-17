@@ -23,7 +23,6 @@ import custom_msgs.CustomAdditionRequest;
 import custom_msgs.CustomAdditionResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.apache.commons.logging.Log;
 import org.ros.concurrent.CancellableLoop;
 import org.ros.exception.RemoteException;
 import org.ros.exception.RosRuntimeException;
@@ -31,6 +30,7 @@ import org.ros.exception.ServiceNotFoundException;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
+import org.ros.node.RosLog;
 import org.ros.node.service.ServiceClient;
 import org.ros.node.service.ServiceResponseListener;
 
@@ -81,7 +81,7 @@ public final class CustomROSJavaClientNodeMain extends AbstractNodeMain {
     @Override
     public final void onStart(final ConnectedNode connectedNode) {
 
-        final Log log = connectedNode.getLog();
+        final RosLog log = connectedNode.getLog();
 
         //Create a client, for the rosServiceName, that is of type rosjava_test_msgs.CustomAddition._TYPE.
         //ROS Java service definition interfaces  have a public static String _TYPE field where the ros type is saved.

@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Main Executable class that starts a rosjava roscore.
- * An example that uses an external roscore is avalailable in {@link MainExternalRos}
+ * An example that uses an external roscore is avalailable in {@link MainExternal}
  * Created at 2022-08-30
  *
  * @author Spyros Koukas

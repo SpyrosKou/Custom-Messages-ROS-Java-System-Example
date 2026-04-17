@@ -18,11 +18,11 @@ package eu.spyros.koukas.ros.examples;
 
 import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.logging.Log;
 import org.ros.concurrent.CancellableLoop;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
+import org.ros.node.RosLog;
 import org.ros.node.topic.Publisher;
 
 import java.util.Arrays;
@@ -74,7 +74,7 @@ public final class CustomROSJavaPublisherNodeMain extends AbstractNodeMain {
         //Note that it is the responsibility of the programmer to provide the correct type to the publisher
         final Publisher<custom_msgs.RosCustomMessage> publisher = connectedNode.newPublisher(this.rosTopicName, custom_msgs.RosCustomMessage._TYPE);
 
-        final Log log = connectedNode.getLog();
+        final RosLog log = connectedNode.getLog();
 
         //The CancellableLoop will run again and again until the node is stopped.
         connectedNode.executeCancellableLoop(new CancellableLoop() {

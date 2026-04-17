@@ -19,10 +19,10 @@ package eu.spyros.koukas.ros.examples;
 
 import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.logging.Log;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
+import org.ros.node.RosLog;
 import org.ros.node.topic.Subscriber;
 
 
@@ -69,7 +69,7 @@ public final class CustomROSJavaSubscriberNodeMain extends AbstractNodeMain {
     @Override
     public final void onStart(final ConnectedNode connectedNode) {
 
-        final Log log = connectedNode.getLog();
+        final RosLog log = connectedNode.getLog();
 
         //create a subscriber, for the rosTopicName, that is of type custom_msgs.RosCustomMessage._TYPE.
         //ROS Java messages will always have a public static String _TYPE field where the ros type is stored.

@@ -1,8 +1,9 @@
 package msgscreation;
 
 import custom_msgs.RosCustomMessage;
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.ros.internal.message.DefaultMessageFactory;
 import org.ros.internal.message.definition.MessageDefinitionReflectionProvider;
 import org.ros.message.MessageDefinitionProvider;
@@ -25,9 +26,9 @@ public class MessagesTest {
             final RosCustomMessage customMessage = factory.newFromType(RosCustomMessage._TYPE);
             final String message = "TestMessage";
             customMessage.setText(message);
-            Assert.assertEquals(customMessage.getText(), message);
+            Assertions.assertEquals(customMessage.getText(), message);
         } catch (final Exception exception) {
-            Assert.fail("Failed creating ROS message : [" + exception.getMessage() + "]");
+            Assertions.fail("Failed creating ROS message : [" + exception.getMessage() + "]");
         }
 
     }

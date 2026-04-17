@@ -21,10 +21,10 @@ import custom_msgs.CustomAddition;
 import custom_msgs.CustomAdditionRequest;
 import custom_msgs.CustomAdditionResponse;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.logging.Log;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
+import org.ros.node.RosLog;
 import org.ros.node.service.ServiceServer;
 
 /**
@@ -37,7 +37,7 @@ public final class CustomROSJavaServerNodeMain extends AbstractNodeMain {
     private final String rosServiceName;
     private final String rosNodeName;
     private final long SLEEP_DURATION_MILLIS = 1000;
-    private Log log;
+    private RosLog log;
 
     /**
      * @param rosServiceName the name of the topic to publish
