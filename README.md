@@ -31,7 +31,7 @@ This module uses the [custom-ros-messages module](https://github.com/SpyrosKou/C
 
 In order to compile and run this project only Java needs to be installed. [GIT](https://git-scm.com/downloads) also makes getting the source very easy. Links are provided for convenience.
 - [GIT](https://git-scm.com/downloads) , in order to clone the [project repository](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git)
-- JDK, the [project](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git) has been developed and tested using [JDK 17](https://jdk.java.net/17/)
+- JDK, the [project](https://github.com/SpyrosKou/Custom-Messages-ROS-Java-System-Example.git) has been developed and tested using [JDK 21](https://jdk.java.net/21/)
 - Gradle, is used for project compilation. Installing it is not required. Following the instructions below will automatically download gradle 7.5 and ignore any existing installation.
 
 ## Quick Instructions for Windows [Power Shell](https://github.com/PowerShell/PowerShell/releases/)
