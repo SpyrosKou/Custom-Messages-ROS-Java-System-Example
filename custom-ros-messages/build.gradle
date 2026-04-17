@@ -1,27 +1,26 @@
 //@author Spyros Koukas
 buildscript {
     dependencies {
-        classpath "org.ros.rosjava_core:rosjava:0.3.6"
-        classpath "org.ros.rosjava_bootstrap:message_generation:0.3.3"
+        classpath "org.ros.rosjava_core:rosjava:0.4.1.2"
+        classpath "org.ros.rosjava_bootstrap:message_generation:0.3.9"
     }
-    repositories {
-        jcenter()
+    repositories {//start repositories
         mavenCentral()
         maven {
-            url "https://github.com/rosjava/rosjava_mvn_repo/raw/master"
+            url = uri('https://github.com/SpyrosKou/rosjava_mvn_repo/raw/noetic')
+            name = 'GithubSpyrosKouRepository'
         }
-    }
+
+    }//end repositories
 }
 
 plugins {
     id 'java-library'
     id 'idea'
 }
-ext {
-    targetDir = file("src/generated-sources/java")
-}
+def targetDir = file("src/generated-sources/java")
 
-task generateRosMessages {
+tasks.register('generateRosMessages') {
     group 'build'
 
     def resourcesFolder = "src/main/resources/";
@@ -46,30 +45,32 @@ sourceSets.main.java.srcDirs "src/generated-sources/java"
 compileJava.dependsOn generateRosMessages
 
 
-
-repositories {
-    repositories {
-        jcenter()
-        mavenCentral()
-        maven {
-            url "https://github.com/rosjava/rosjava_mvn_repo/raw/master"
-        }
-
+repositories {//start repositories
+    mavenCentral()
+    maven {
+        url = uri('https://github.com/SpyrosKou/rosjava_mvn_repo/raw/noetic')
+        name = 'GithubSpyrosKouRepository'
     }
-}
+
+}//end repositories
 
 group 'eu.spyros.koukas.examples.rosjava'
 version = '0.1-SNAPSHOT'
 
 
 dependencies {
-    api 'org.ros.rosjava_bootstrap:message_generation:0.3.3'
+    api 'org.ros.rosjava_bootstrap:message_generation:0.3.9'
     api 'org.ros.rosjava_messages:std_msgs:0.5.11'
     api 'org.ros.rosjava_messages:geometry_msgs:1.12.7'
     api 'org.ros.rosjava_messages:move_base_msgs:1.11.14'
     api 'org.ros.rosjava_messages:sensor_msgs:1.12.7'
     api 'org.ros.rosjava_messages:std_srvs:1.10.12'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 clean {
